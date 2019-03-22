@@ -8,11 +8,15 @@ namespace demo01.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: Home
-        public string Index()
+        public ViewResult Index()
         {
-            return "Hello world!";
+            return View();
         }
+        // GET: Home
+        //public string Index()
+        //{
+        //    return "Hello world!";
+        //}
         //public ActionResult Index()
         //{
         //    return View();
