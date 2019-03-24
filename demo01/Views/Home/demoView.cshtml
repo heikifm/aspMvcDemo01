@@ -1,0 +1,27 @@
+﻿@model demo01.Models.MemberResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>demoView</title>
+</head>
+<body>
+    <div> 
+        <h2>Hello!! @Model.Name</h2>
+        @if (Model.Attend == true)
+        {
+            @:Attendance
+        }
+        else
+        {
+            @:Absent
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿@model demo01.Models.MemberResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/Content/Style.css"/>
+    <title>TestForm</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary()
+
+            <p>name: @Html.TextBoxFor(a => a.Name)</p>
+            <p>email: @Html.TextBoxFor(a => a.Email)</p>
+            <p>Tel: @Html.TextBoxFor(a => a.Tel)</p>
+            <p>
+                Attend: @Html.DropDownListFor(a => a.Attend, new[] {
+new SelectListItem() {Text = "Yes", Value=bool.TrueString},
+new SelectListItem() {Text = "No", Value=bool.FalseString},
+},"Select")
+            </p>
+
+            <input type="submit" value="Confirm" />
+        }
+
+    </div>
+</body>
+</html>
+
+
+<!--
+<input data-val="true" data-val_required="Input your name" id="Name"
+    name="Name" type="text" value="" />
+
+<input class="input-validation-error" data-val="true" data-val_required="Input your name" id="Name"
+    name="Name" type="text" value="" />
+
+-->

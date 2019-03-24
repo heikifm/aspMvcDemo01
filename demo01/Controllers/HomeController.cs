@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using demo01.Models;
 
 namespace demo01.Controllers
 {
@@ -10,8 +11,34 @@ namespace demo01.Controllers
     {
         public ViewResult Index()
         {
+            int hour = DateTime.Now.Hour;
+            ViewBag.Greeting = hour < 12 ? "morning!" : "afternoon!";
             return View();
         }
+
+        [HttpGet]
+        public ViewResult TestForm()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult TestForm(MemberResponse memberResponse)
+        {
+            if (ModelState.IsValid)
+            {
+                return View("demoView", memberResponse);
+            }
+            else
+            {
+                return View();
+            }
+            
+        }
+
+
+
+
         // GET: Home
         //public string Index()
         //{
