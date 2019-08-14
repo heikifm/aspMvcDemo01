@@ -63,5 +63,10 @@ namespace demo01.Controllers
         {
             return "Ubbbbbbbbb";
         }
+
+        public string Jung2()
+        {
+            return "Ubbbbbbbbb";
+        }
     }
 }
