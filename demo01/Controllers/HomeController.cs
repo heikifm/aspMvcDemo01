@@ -64,6 +64,11 @@ namespace demo01.Controllers
             return "Ubbbbbbbbb";
         }
 
+        public string Test2()
+        {
+            return "This is test????";
+        }
+
         public string Jung2()
         {
             return "Ubbbbbbbbb";
