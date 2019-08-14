@@ -48,5 +48,10 @@ namespace demo01.Controllers
         //{
         //    return View();
         //}
+
+        public string Jung()
+        {
+            return "Uaaaaaaaaaa";
+        }
     }
 }
