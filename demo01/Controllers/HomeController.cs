@@ -58,5 +58,10 @@ namespace demo01.Controllers
         {
             return "This is test!!!!";
         }
+
+        public string Test2()
+        {
+            return "This is test????";
+        }
     }
 }
